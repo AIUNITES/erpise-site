@@ -7,7 +7,7 @@
   <!-- Primary Meta Tags -->
   <title>ERPise - SIS Solutions for Higher Education | Jenzabar, SQL Server, SSIS, SSRS, PowerShell</title>
   <meta name="title" content="ERPise - SIS Solutions for Higher Education">
-  <meta name="description" content="Ready-to-use solutions for Student Information Systems. SQL scripts, SSIS packages, SSRS reports, PowerShell automation, and Power Platform dashboards for Jenzabar and higher ed.">
+  <meta name="description" content="Expert solutions for Student Information Systems. Consulting, development, and support for Jenzabar, SQL Server, SSIS, SSRS, PowerShell, and Power Platform in higher education.">
   <meta name="keywords" content="Jenzabar, SIS solutions, higher education, SQL Server, SSIS, SSRS, PowerShell, Power BI, student information system, IPEDS, NCAA compliance, enrollment reporting">
   <meta name="author" content="ERPise">
   <meta name="robots" content="index, follow">
@@ -17,13 +17,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://erpise.com/">
   <meta property="og:title" content="ERPise - SIS Solutions for Higher Education">
-  <meta property="og:description" content="Ready-to-use SQL scripts, SSIS packages, SSRS reports, and automation for Jenzabar and higher ed systems.">
+  <meta property="og:description" content="Expert consulting and development for Jenzabar, SQL Server, SSIS, SSRS, and Power Platform.">
   <meta property="og:image" content="https://erpise.com/images/og-image.png">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ERPise - SIS Solutions for Higher Education">
-  <meta name="twitter:description" content="SQL, SSIS, SSRS, PowerShell solutions for Jenzabar and higher ed.">
+  <meta name="twitter:description" content="SIS consulting and development for higher education.">
   
   <!-- Theme -->
   <meta name="theme-color" content="#10b981">
@@ -31,7 +31,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
   
   <style>
@@ -39,7 +39,6 @@
       --bg-dark: #0a0a0f;
       --bg-card: #12121a;
       --bg-card-hover: #1a1a24;
-      --bg-code: #1e1e2e;
       --text-primary: #ffffff;
       --text-secondary: #a0a0b0;
       --text-muted: #6b7280;
@@ -138,13 +137,8 @@
       background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
       pointer-events: none;
     }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
     .hero-content {
+      max-width: 700px;
       position: relative;
       z-index: 1;
     }
@@ -162,7 +156,7 @@
       margin-bottom: 24px;
     }
     .hero h1 {
-      font-size: 3.25rem;
+      font-size: 3.5rem;
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 24px;
@@ -173,16 +167,16 @@
       -webkit-text-fill-color: transparent;
     }
     .hero-subtitle {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       color: var(--text-secondary);
       margin-bottom: 32px;
-      max-width: 500px;
+      max-width: 560px;
     }
     .hero-cta {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
     .btn {
       display: inline-flex;
@@ -228,11 +222,16 @@
       gap: 6px;
       background: var(--bg-card);
       border: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 14px;
+      padding: 10px 16px;
       border-radius: 8px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       font-weight: 500;
       color: var(--text-secondary);
+      transition: all 0.2s;
+    }
+    .tech-pill:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: var(--bg-card-hover);
     }
     .tech-pill .dot {
       width: 8px;
@@ -245,48 +244,6 @@
     .tech-pill.ssrs .dot { background: var(--orange); }
     .tech-pill.powershell .dot { background: var(--purple); }
     .tech-pill.power .dot { background: var(--yellow); }
-    
-    /* Code Preview */
-    .hero-code {
-      background: var(--bg-code);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-    .code-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 16px;
-      background: rgba(0,0,0,0.3);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .code-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    .code-dot.red { background: #ff5f57; }
-    .code-dot.yellow { background: #febc2e; }
-    .code-dot.green { background: #28c840; }
-    .code-title {
-      margin-left: 12px;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .code-body {
-      padding: 20px;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.85rem;
-      line-height: 1.8;
-      overflow-x: auto;
-    }
-    .code-comment { color: #6a9955; }
-    .code-keyword { color: #569cd6; }
-    .code-string { color: #ce9178; }
-    .code-function { color: #dcdcaa; }
-    .code-number { color: #b5cea8; }
-    .code-table { color: #4ec9b0; }
     
     /* Demo Badge */
     .demo-badge {
@@ -394,16 +351,6 @@
       font-size: 0.75rem;
       color: var(--text-secondary);
     }
-    .platform-count {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(255,255,255,0.05);
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
     
     /* Solutions by Function */
     .solutions-grid {
@@ -457,71 +404,37 @@
       color: var(--accent);
     }
     
-    /* Sample Scripts Section */
-    .samples-grid {
+    /* Services Section */
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-    .sample-card {
-      background: var(--bg-code);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      overflow: hidden;
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s;
     }
-    .sample-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 20px;
-      background: rgba(0,0,0,0.3);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+    .service-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
     }
-    .sample-title {
-      font-weight: 600;
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .service-card p {
+      color: var(--text-secondary);
       font-size: 0.95rem;
     }
-    .sample-type {
-      font-size: 0.75rem;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-    .sample-type.sql { background: rgba(239,68,68,0.2); color: var(--red); }
-    .sample-type.powershell { background: rgba(139,92,246,0.2); color: var(--purple); }
-    .sample-type.ssis { background: rgba(59,130,246,0.2); color: var(--blue); }
-    .sample-code {
-      padding: 16px 20px;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.8rem;
-      line-height: 1.7;
-      color: var(--text-secondary);
-      max-height: 200px;
-      overflow: hidden;
-    }
-    .sample-footer {
-      padding: 12px 20px;
-      background: rgba(0,0,0,0.2);
-      border-top: 1px solid rgba(255,255,255,0.05);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .sample-meta {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    .sample-btn {
-      background: var(--accent);
-      color: #000;
-      padding: 6px 14px;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .sample-btn:hover { background: var(--accent-dark); }
     
     /* Stats Section */
     .stats-grid {
@@ -647,15 +560,14 @@
     /* Responsive */
     @media (max-width: 1024px) {
       .platforms-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .samples-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2.5rem; }
-      .hero-code { margin-top: 40px; }
       .platforms-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr; }
     }
@@ -718,8 +630,8 @@
       <div class="nav-links">
         <a href="#platforms">Platforms</a>
         <a href="#solutions">Solutions</a>
-        <a href="#samples">Samples</a>
-        <a href="#contact" class="nav-cta">Get Access</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </div>
     </div>
   </nav>
@@ -727,44 +639,22 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="demo-badge">🚧 Demo / Pre-Launch Preview</div>
-          <div class="hero-badge">🎓 Higher Education SIS Solutions</div>
-          <h1>Ready-to-Use<br><span class="gradient">SIS Solutions</span></h1>
-          <p class="hero-subtitle">SQL scripts, SSIS packages, SSRS reports, PowerShell automation, and Power Platform dashboards for Jenzabar and higher education systems.</p>
-          <div class="hero-cta">
-            <a href="#solutions" class="btn btn-primary">Browse Solutions</a>
-            <a href="#samples" class="btn btn-secondary">View Samples</a>
-          </div>
-          <div class="tech-stack">
-            <span class="tech-pill jenzabar"><span class="dot"></span>Jenzabar</span>
-            <span class="tech-pill sql"><span class="dot"></span>SQL Server</span>
-            <span class="tech-pill ssis"><span class="dot"></span>SSIS</span>
-            <span class="tech-pill ssrs"><span class="dot"></span>SSRS</span>
-            <span class="tech-pill powershell"><span class="dot"></span>PowerShell</span>
-            <span class="tech-pill power"><span class="dot"></span>Power Platform</span>
-          </div>
+      <div class="hero-content">
+        <div class="demo-badge">🚧 Demo / Pre-Launch Preview</div>
+        <div class="hero-badge">🎓 Higher Education SIS Solutions</div>
+        <h1>Expert <span class="gradient">SIS Solutions</span> for Higher Ed</h1>
+        <p class="hero-subtitle">Consulting, development, and support for Jenzabar, SQL Server, SSIS, SSRS, PowerShell, and Power Platform. Built by practitioners with real institutional experience.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#solutions" class="btn btn-secondary">View Solutions</a>
         </div>
-        <div class="hero-code">
-          <div class="code-header">
-            <span class="code-dot red"></span>
-            <span class="code-dot yellow"></span>
-            <span class="code-dot green"></span>
-            <span class="code-title">enrollment_comparison.sql</span>
-          </div>
-          <div class="code-body">
-            <span class="code-comment">-- Compare enrollment year over year</span><br>
-            <span class="code-keyword">SELECT</span><br>
-            &nbsp;&nbsp;<span class="code-function">YEAR</span>(reg.add_date) <span class="code-keyword">AS</span> enrollment_year,<br>
-            &nbsp;&nbsp;<span class="code-function">COUNT</span>(<span class="code-keyword">DISTINCT</span> reg.id_num) <span class="code-keyword">AS</span> students,<br>
-            &nbsp;&nbsp;<span class="code-function">SUM</span>(reg.credit_hrs) <span class="code-keyword">AS</span> total_credits<br>
-            <span class="code-keyword">FROM</span> <span class="code-table">student_crs_hist</span> reg<br>
-            <span class="code-keyword">WHERE</span> reg.stud_div = <span class="code-string">'UG'</span><br>
-            &nbsp;&nbsp;<span class="code-keyword">AND</span> reg.transaction_sts = <span class="code-string">'C'</span><br>
-            <span class="code-keyword">GROUP BY</span> <span class="code-function">YEAR</span>(reg.add_date)<br>
-            <span class="code-keyword">ORDER BY</span> enrollment_year <span class="code-keyword">DESC</span>;
-          </div>
+        <div class="tech-stack">
+          <span class="tech-pill jenzabar"><span class="dot"></span>Jenzabar</span>
+          <span class="tech-pill sql"><span class="dot"></span>SQL Server</span>
+          <span class="tech-pill ssis"><span class="dot"></span>SSIS</span>
+          <span class="tech-pill ssrs"><span class="dot"></span>SSRS</span>
+          <span class="tech-pill powershell"><span class="dot"></span>PowerShell</span>
+          <span class="tech-pill power"><span class="dot"></span>Power Platform</span>
         </div>
       </div>
     </div>
@@ -774,16 +664,15 @@
   <section class="section" id="platforms">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Platforms</span>
-        <h2>Solutions by Technology</h2>
-        <p>Battle-tested scripts and packages for your entire Microsoft stack</p>
+        <span class="section-badge">Expertise</span>
+        <h2>Technology Platforms</h2>
+        <p>Deep expertise across your entire Microsoft and SIS technology stack</p>
       </div>
       <div class="platforms-grid">
         <div class="platform-card jenzabar">
-          <span class="platform-count">25+ items</span>
           <div class="platform-icon">🗄️</div>
           <h3>Jenzabar</h3>
-          <p>J1 Desktop navigation, permissions, workflows, and system administration guides.</p>
+          <p>J1 Desktop navigation, permissions, workflows, system administration, and optimization.</p>
           <div class="platform-tags">
             <span class="platform-tag">J1 Desktop</span>
             <span class="platform-tag">CX</span>
@@ -793,10 +682,9 @@
         </div>
         
         <div class="platform-card sql">
-          <span class="platform-count">50+ scripts</span>
           <div class="platform-icon">📊</div>
           <h3>SQL Server</h3>
-          <p>Query library for enrollment, billing, financial aid, compliance, and data cleanup.</p>
+          <p>Query development, stored procedures, views, performance tuning, and database optimization.</p>
           <div class="platform-tags">
             <span class="platform-tag">T-SQL</span>
             <span class="platform-tag">Optimization</span>
@@ -806,10 +694,9 @@
         </div>
         
         <div class="platform-card ssis">
-          <span class="platform-count">15+ packages</span>
           <div class="platform-icon">🔄</div>
           <h3>SSIS</h3>
-          <p>ETL packages for data migration, integration, and scheduled data transfers.</p>
+          <p>ETL package development, data migration, system integration, and scheduled data transfers.</p>
           <div class="platform-tags">
             <span class="platform-tag">ETL</span>
             <span class="platform-tag">Migration</span>
@@ -819,10 +706,9 @@
         </div>
         
         <div class="platform-card ssrs">
-          <span class="platform-count">30+ reports</span>
           <div class="platform-icon">📋</div>
           <h3>SSRS</h3>
-          <p>Report templates for enrollment, billing, financial aid, and compliance reporting.</p>
+          <p>Report development for enrollment, billing, financial aid, compliance, and executive dashboards.</p>
           <div class="platform-tags">
             <span class="platform-tag">Enrollment</span>
             <span class="platform-tag">Billing</span>
@@ -832,10 +718,9 @@
         </div>
         
         <div class="platform-card powershell">
-          <span class="platform-count">20+ scripts</span>
           <div class="platform-icon">⚡</div>
           <h3>PowerShell</h3>
-          <p>Automation scripts for AD sync, batch processing, file management, and system tasks.</p>
+          <p>Automation scripts for AD sync, batch processing, file management, and scheduled system tasks.</p>
           <div class="platform-tags">
             <span class="platform-tag">Automation</span>
             <span class="platform-tag">AD Sync</span>
@@ -845,7 +730,6 @@
         </div>
         
         <div class="platform-card power">
-          <span class="platform-count">10+ items</span>
           <div class="platform-icon">📈</div>
           <h3>Power Platform</h3>
           <p>Power BI dashboards, Power Automate flows, and Power Apps for campus operations.</p>
@@ -864,9 +748,9 @@
   <section class="section section-dark" id="solutions">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Functions</span>
+        <span class="section-badge">Solutions</span>
         <h2>Solutions by Department</h2>
-        <p>Find exactly what you need for your area</p>
+        <p>Targeted solutions for every area of your institution</p>
       </div>
       <div class="solutions-grid">
         <div class="solution-card">
@@ -877,7 +761,7 @@
           <p>Track enrollment, registration trends, and student counts.</p>
           <div class="solution-items">
             <span class="solution-item">Enrollment comparison YoY</span>
-            <span class="solution-item">Registration status reports</span>
+            <span class="solution-item">Registration status tracking</span>
             <span class="solution-item">Credit hour analysis</span>
             <span class="solution-item">Headcount dashboards</span>
           </div>
@@ -949,100 +833,36 @@
             <span class="solution-item">Duplicate detection</span>
             <span class="solution-item">Data validation</span>
             <span class="solution-item">Index maintenance</span>
-            <span class="solution-item">Archive scripts</span>
+            <span class="solution-item">Archive processes</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Sample Scripts -->
-  <section class="section" id="samples">
+  <!-- Services Section -->
+  <section class="section" id="services">
     <div class="container">
       <div class="section-header">
-        <span class="section-badge">Samples</span>
-        <h2>Preview Our Solutions</h2>
-        <p>Real scripts from our library</p>
+        <span class="section-badge">Services</span>
+        <h2>How We Help</h2>
+        <p>Flexible engagement models to fit your needs</p>
       </div>
-      <div class="samples-grid">
-        <div class="sample-card">
-          <div class="sample-header">
-            <span class="sample-title">Duplicate Student Detection</span>
-            <span class="sample-type sql">SQL</span>
-          </div>
-          <div class="sample-code">
-            <span class="code-comment">-- Find potential duplicate students</span><br>
-            <span class="code-keyword">SELECT</span> a.id_num, a.last_name, a.first_name,<br>
-            &nbsp;&nbsp;a.birth_dte, b.id_num <span class="code-keyword">AS</span> dup_id<br>
-            <span class="code-keyword">FROM</span> <span class="code-table">name_master</span> a<br>
-            <span class="code-keyword">JOIN</span> <span class="code-table">name_master</span> b<br>
-            &nbsp;&nbsp;<span class="code-keyword">ON</span> a.last_name = b.last_name<br>
-            &nbsp;&nbsp;<span class="code-keyword">AND</span> a.birth_dte = b.birth_dte<br>
-            &nbsp;&nbsp;<span class="code-keyword">AND</span> a.id_num < b.id_num...
-          </div>
-          <div class="sample-footer">
-            <span class="sample-meta">Used by 12 institutions</span>
-            <a href="#contact" class="sample-btn">Get Full Script</a>
-          </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>Consulting</h3>
+          <p>Strategic guidance on SIS optimization, reporting strategy, and technology decisions. Leverage years of higher ed experience.</p>
         </div>
-        
-        <div class="sample-card">
-          <div class="sample-header">
-            <span class="sample-title">AD User Sync Automation</span>
-            <span class="sample-type powershell">PowerShell</span>
-          </div>
-          <div class="sample-code">
-            <span class="code-comment"># Sync students to Active Directory</span><br>
-            $students = <span class="code-function">Invoke-Sqlcmd</span> -Query @"<br>
-            &nbsp;&nbsp;SELECT id_num, first_name, last_name, email<br>
-            &nbsp;&nbsp;FROM name_master WHERE current_student = 'Y'<br>
-            "@<br><br>
-            <span class="code-keyword">foreach</span> ($student <span class="code-keyword">in</span> $students) {<br>
-            &nbsp;&nbsp;<span class="code-function">New-ADUser</span> -Name $student.first_name...
-          </div>
-          <div class="sample-footer">
-            <span class="sample-meta">Saves 10+ hours/week</span>
-            <a href="#contact" class="sample-btn">Get Full Script</a>
-          </div>
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3>Development</h3>
+          <p>Custom solutions built to your specifications. Reports, integrations, automations, and dashboards tailored to your institution.</p>
         </div>
-        
-        <div class="sample-card">
-          <div class="sample-header">
-            <span class="sample-title">IPEDS Fall Enrollment Extract</span>
-            <span class="sample-type sql">SQL</span>
-          </div>
-          <div class="sample-code">
-            <span class="code-comment">-- IPEDS 12-month enrollment</span><br>
-            <span class="code-keyword">SELECT</span><br>
-            &nbsp;&nbsp;<span class="code-keyword">CASE</span> <span class="code-keyword">WHEN</span> gender = <span class="code-string">'M'</span> <span class="code-keyword">THEN</span> <span class="code-number">1</span> <span class="code-keyword">ELSE</span> <span class="code-number">2</span> <span class="code-keyword">END</span> <span class="code-keyword">AS</span> EFGENDER,<br>
-            &nbsp;&nbsp;<span class="code-keyword">CASE</span> ethnicity_code<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">WHEN</span> <span class="code-string">'H'</span> <span class="code-keyword">THEN</span> <span class="code-number">1</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">WHEN</span> <span class="code-string">'A'</span> <span class="code-keyword">THEN</span> <span class="code-number">2</span>...
-          </div>
-          <div class="sample-footer">
-            <span class="sample-meta">IPEDS 2024-25 compliant</span>
-            <a href="#contact" class="sample-btn">Get Full Script</a>
-          </div>
-        </div>
-        
-        <div class="sample-card">
-          <div class="sample-header">
-            <span class="sample-title">Charge Comparison Report</span>
-            <span class="sample-type sql">SQL</span>
-          </div>
-          <div class="sample-code">
-            <span class="code-comment">-- Compare charges term over term</span><br>
-            <span class="code-keyword">SELECT</span> id_num, charge_code,<br>
-            &nbsp;&nbsp;<span class="code-function">SUM</span>(<span class="code-keyword">CASE WHEN</span> yr_cde = <span class="code-string">'2024'</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">THEN</span> charge_amt <span class="code-keyword">END</span>) <span class="code-keyword">AS</span> charges_2024,<br>
-            &nbsp;&nbsp;<span class="code-function">SUM</span>(<span class="code-keyword">CASE WHEN</span> yr_cde = <span class="code-string">'2025'</span><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">THEN</span> charge_amt <span class="code-keyword">END</span>) <span class="code-keyword">AS</span> charges_2025<br>
-            <span class="code-keyword">FROM</span> <span class="code-table">charge_master</span>...
-          </div>
-          <div class="sample-footer">
-            <span class="sample-meta">Billing validation</span>
-            <a href="#contact" class="sample-btn">Get Full Script</a>
-          </div>
+        <div class="service-card">
+          <div class="service-icon">🤝</div>
+          <h3>Support</h3>
+          <p>Ongoing maintenance and support for your SIS environment. Quick turnaround on requests and issues.</p>
         </div>
       </div>
     </div>
@@ -1053,20 +873,20 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <div class="stat-value">150+</div>
-          <div class="stat-label">Ready-to-use scripts</div>
-        </div>
-        <div class="stat-card">
           <div class="stat-value">6</div>
           <div class="stat-label">Technology platforms</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">10+</div>
-          <div class="stat-label">Years of Jenzabar experience</div>
+          <div class="stat-label">Years Jenzabar experience</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">100%</div>
           <div class="stat-label">Higher ed focused</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">6</div>
+          <div class="stat-label">Functional areas covered</div>
         </div>
       </div>
     </div>
@@ -1076,12 +896,12 @@
   <section class="cta-section" id="contact">
     <div class="container">
       <div class="cta-content">
-        <h2>Get Access to the Full Library</h2>
-        <p>Join the waitlist for early access to our complete SIS solutions library.</p>
+        <h2>Let's Talk About Your SIS Needs</h2>
+        <p>Get in touch to discuss how we can help your institution.</p>
         <form class="cta-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeQUi49AdTBRjetz5MDFQgMIkm9-vOMb_ARKwYEz41j_Nfiwg/formResponse" method="POST" target="_blank">
           <input type="hidden" name="entry.2053726945" value="ERPise SIS Solutions">
           <input type="email" name="entry.904300305" placeholder="you@institution.edu" required>
-          <button type="submit" class="btn btn-primary">Join Waitlist</button>
+          <button type="submit" class="btn btn-primary">Get In Touch</button>
         </form>
       </div>
     </div>
@@ -1096,8 +916,8 @@
             <span class="icon">🎓</span>
             <span class="text">ERP<span class="accent">ise</span></span>
           </a>
-          <p>Ready-to-use SIS solutions for higher education. SQL, SSIS, SSRS, PowerShell, and Power Platform.</p>
-          <p style="color: #f59e0b; margin-top: 12px;">⚠️ Demo/pre-launch. Full library coming soon.</p>
+          <p>Expert SIS solutions for higher education. Jenzabar, SQL Server, SSIS, SSRS, PowerShell, and Power Platform.</p>
+          <p style="color: #f59e0b; margin-top: 12px;">⚠️ Demo/pre-launch preview.</p>
         </div>
         <div class="footer-links">
           <h4>Platforms</h4>
