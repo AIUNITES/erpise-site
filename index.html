@@ -87,20 +87,17 @@
         <span class="logo-icon">◆</span>
         <span class="logo-text">ERP<span class="logo-accent">ise</span></span>
       </a>
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0)" onclick="openSearch()" title="Search (Ctrl+K)">🔍 Search</a>
-        <a href="#contact" class="nav-cta">Get Started</a>
+      <div class="nav-links" id="ei-nav">
+        <a href="#services" onclick="eiClose()">Services</a>
+        <a href="#expertise" onclick="eiClose()">Expertise</a>
+        <a href="#about" onclick="eiClose()">About</a>
+        <a href="javascript:void(0)" onclick="openSearch();eiClose()" title="Search (Ctrl+K)">🔍 Search</a>
+        <a href="#contact" class="nav-cta" onclick="eiClose()">Get Started</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="nav-hamburger" id="ei-hbg" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('ei-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
   </nav>
+  <script>function eiClose(){document.getElementById('ei-nav').classList.remove('open');document.getElementById('ei-hbg').classList.remove('open');}</script>
 
   <!-- Hero Section -->
   <section class="hero">
