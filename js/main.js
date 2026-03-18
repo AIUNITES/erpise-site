@@ -1,12 +1,20 @@
 // ERPise - Main JavaScript
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
-  const navToggle = document.querySelector('.nav-toggle');
+  const navToggle = document.querySelector('.nav-hamburger');
   const navLinks = document.querySelector('.nav-links');
   
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    // Close on link click
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
     });
   }
   
