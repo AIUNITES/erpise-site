@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573596965267859" crossorigin="anonymous"></script>
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-VP15KRLV6P"></script>
   <script>
@@ -11,6 +14,9 @@
     gtag('js', new Date());
     gtag('config', 'G-VP15KRLV6P');
   </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573596965267859" crossorigin="anonymous"></script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -94,7 +100,7 @@
         <a href="javascript:void(0)" onclick="openSearch();eiClose()" title="Search (Ctrl+K)">🔍 Search</a>
         <a href="#contact" class="nav-cta" onclick="eiClose()">Get Started</a>
       </div>
-      <button class="nav-hamburger" id="ei-hbg" aria-label="Menu" onclick="var m=document.getElementById('ei-nav');m.style.top=this.closest('nav').getBoundingClientRect().bottom+'px';this.classList.toggle('open');m.classList.toggle('open')"><span></span><span></span><span></span></button>
+      <button class="nav-hamburger" id="ei-hbg" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('ei-nav').classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <script>function eiClose(){document.getElementById('ei-nav').classList.remove('open');document.getElementById('ei-hbg').classList.remove('open');}</script>

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://aiunites.github.io/erpise-site/sitemap.xml
+Sitemap: https://erpise.com/sitemap.xml
